@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Welcome
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,41 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- home.page.html -->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  
+    <swiper [autoplay]="true" [keyboard]="true" [pagination]="true" [scrollbar]="true" [zoom]="true">
+    <ng-template swiperSlide><img src="../../assets/hrh-queen-elizabeth-hintze-hall-hero-desktop.jpg.thumb.1920.1920.jpg"></ng-template>
+    <ng-template swiperSlide><img src="../../assets/hero-1.jpg.thumb.1920.1920.jpg"></ng-template>
+    <ng-template swiperSlide><img src="../../assets/anning-rooms-cabinet-one-half.jpg.thumb.620.620.jpg"></ng-template>
+    <ng-template swiperSlide><img src="../../assets/sculpture.jpg"></ng-template>
+    <ng-template swiperSlide><img src="../../assets/music.webp"></ng-template>
+  </swiper>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div><img src="../../assets/freeexhibit.jpg" class = "img1" routerLink ="/exhibit"></div>
+        <p routerLink ="/exhibit">Upcoming Exhibits</p>
+      </ion-col>
+      <ion-col>
+        <div><img src="../../assets/exclusive.jpg" class = "img1" routerLink ="/events"></div>
+        <p routerLink ="/events">Special Events</p>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div><img src="../../assets/priority.jpg" class = "img1" [routerLink] ="['/collection']"></div>
+        <p routerLink ="/collection">Museum Collection</p>
+      </ion-col>
+      <ion-col><div><img src="../../assets/magazine.jpg" class = "img1" routerLink ="/magazines"></div><p routerLink ="/magazines">Member Magazines</p></ion-col>
+      
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
